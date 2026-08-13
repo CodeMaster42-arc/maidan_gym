@@ -108,13 +108,18 @@
 /* The logo PNG is white artwork on an opaque black plate (no alpha), so it can
    only ever sit on black. mix-blend-mode: lighten drops the black plate out and
    keeps the mark crisp against the translucent header. */
-/* 3x the original clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem).
-   --header-h grew alongside it — the header is a fixed height, so the logo
-   would otherwise overflow it. */
+/* Capped to fit inside --header-h (3.5rem mobile / 4.5rem desktop) with a few
+   px of breathing room. These two values are coupled: raising the logo without
+   raising --header-h makes the mark overflow the bar. */
 .brand img {
-  height: clamp(5.7rem, 4.2rem + 4.8vw, 7.8rem);
+  height: clamp(2.4rem, 1.7rem + 2.2vw, 3.4rem);
   width: auto;
   mix-blend-mode: lighten;
+}
+
+/* The footer mark is not boxed by a fixed-height bar, so it can run larger. */
+.site-footer .brand img {
+  height: clamp(3.2rem, 2.2rem + 3.2vw, 5rem);
 }
 
 .site-nav ul {

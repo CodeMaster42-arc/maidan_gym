@@ -99,10 +99,10 @@ table {
   --gutter: clamp(1.125rem, 0.6rem + 2.4vw, 3rem);
   --measure: 62ch;
   --max-w: 84rem;
-  /* Sized to clear the 3x logo set in .brand img, plus breathing room. The
-     header is a fixed height, so if the logo size changes this must move with
-     it or the mark overflows the bar. */
-  --header-h: 7rem;
+  /* Halved from 7rem. The logo in .brand img is capped to fit inside this with
+     a little padding: the header is a fixed height, so the two must move
+     together or the mark overflows the bar. */
+  --header-h: 3.5rem;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur: 420ms;
@@ -110,7 +110,7 @@ table {
 
 @media (min-width: 60em) {
   :root {
-    --header-h: 9rem;
+    --header-h: 4.5rem;
   }
 }
 
