@@ -1,0 +1,9 @@
+/* ==========================================================================
+   main.css — import manifest for Maidan Athletic Club
+   This is the ONLY wiring mechanism: a new stylesheet is invisible to the
+   site until it is imported here. Order matters (tokens before consumers).
+   ========================================================================== */
+
+@import url("./base.css");
+@import url("./layout.css");
+@import url("./components.css");

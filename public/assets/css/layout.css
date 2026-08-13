@@ -1,0 +1,161 @@
+/* ==========================================================================
+   layout.css — containers, sections, grids
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--wide {
+  max-width: 110rem;
+}
+
+.container--narrow {
+  max-width: 52rem;
+}
+
+/* --- sections ------------------------------------------------------------- */
+
+.section {
+  padding-block: var(--section-y);
+  position: relative;
+}
+
+.section--tight {
+  padding-block: calc(var(--section-y) * 0.6);
+}
+
+.section--ruled {
+  border-top: 1px solid var(--rule);
+}
+
+/* Full-bleed inversion. Used sparingly — it is the loudest move in the system. */
+.section--invert {
+  background: var(--white);
+  color: var(--black);
+}
+
+.section--invert .eyebrow,
+.section--invert .label,
+.section--invert .muted {
+  color: #555;
+}
+
+.section--invert ::selection {
+  background: var(--black);
+  color: var(--white);
+}
+
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-m);
+  margin-bottom: var(--space-l);
+}
+
+.section__head > div {
+  max-width: 46rem;
+}
+
+.section__head .eyebrow {
+  margin-bottom: var(--space-xs);
+}
+
+.section__head p {
+  margin-top: var(--space-s);
+  max-width: var(--measure);
+  color: var(--muted);
+}
+
+.section--invert .section__head p {
+  color: #555;
+}
+
+/* --- grids ---------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  gap: 1px;
+}
+
+/* 1px gaps over a rule-coloured ground give hairline dividers between cards
+   without any card needing its own border. */
+.grid--ruled {
+  background: var(--rule);
+  border-block: 1px solid var(--rule);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid--gap {
+  gap: var(--space-m);
+  background: none;
+  border: 0;
+}
+
+/* Two-column split: media beside text. */
+.split {
+  display: grid;
+  gap: var(--space-l);
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 64em) {
+  .split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: var(--space-xl);
+  }
+
+  .split--media-right {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+}
+
+.stack > * + * {
+  margin-top: var(--space-s);
+}
+
+.stack-l > * + * {
+  margin-top: var(--space-m);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  align-items: center;
+}
