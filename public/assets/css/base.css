@@ -82,9 +82,9 @@ table {
   --step-0: clamp(0.94rem, 0.90rem + 0.22vw, 1.06rem);
   --step-1: clamp(1.13rem, 1.03rem + 0.50vw, 1.44rem);
   --step-2: clamp(1.44rem, 1.19rem + 1.20vw, 2.25rem);
-  --step-3: clamp(1.94rem, 1.38rem + 2.70vw, 3.63rem);
-  --step-4: clamp(2.63rem, 1.31rem + 6.30vw, 6.00rem);
-  --step-5: clamp(3.25rem, 0.70rem + 11.60vw, 9.00rem);
+  --step-3: clamp(1.75rem, 1.30rem + 2.20vw, 3.10rem);
+  --step-4: clamp(2.20rem, 1.30rem + 4.30vw, 4.60rem);
+  --step-5: clamp(2.60rem, 1.00rem + 7.60vw, 6.60rem);
 
   /* Spacing */
   --space-2xs: 0.375rem;
@@ -99,7 +99,10 @@ table {
   --gutter: clamp(1.125rem, 0.6rem + 2.4vw, 3rem);
   --measure: 62ch;
   --max-w: 84rem;
-  --header-h: 4.5rem;
+  /* Sized to clear the 3x logo set in .brand img, plus breathing room. The
+     header is a fixed height, so if the logo size changes this must move with
+     it or the mark overflows the bar. */
+  --header-h: 7rem;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur: 420ms;
@@ -107,7 +110,7 @@ table {
 
 @media (min-width: 60em) {
   :root {
-    --header-h: 5.5rem;
+    --header-h: 9rem;
   }
 }
 

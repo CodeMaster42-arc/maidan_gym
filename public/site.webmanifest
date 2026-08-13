@@ -1,0 +1,14 @@
+{
+  "name": "Maidan Athletic Club",
+  "short_name": "Maidan",
+  "icons": [
+    {
+      "src": "assets/images/maidan_gym_logo.png",
+      "sizes": "1638x960",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}

@@ -28,6 +28,15 @@
   padding-block: calc(var(--section-y) * 0.6);
 }
 
+/* The header is fixed, so whatever opens a page would otherwise slide under it.
+   .hero is the one exception: it is built to run full-bleed behind the header
+   and already carries its own --header-h allowance. Everything else needs the
+   clearance added here, and it must track --header-h rather than a magic
+   number, or resizing the logo silently reintroduces the overlap. */
+main > :first-child:not(.hero) {
+  padding-top: calc(var(--header-h) + var(--space-l));
+}
+
 .section--ruled {
   border-top: 1px solid var(--rule);
 }

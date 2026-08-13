@@ -108,8 +108,11 @@
 /* The logo PNG is white artwork on an opaque black plate (no alpha), so it can
    only ever sit on black. mix-blend-mode: lighten drops the black plate out and
    keeps the mark crisp against the translucent header. */
+/* 3x the original clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem).
+   --header-h grew alongside it — the header is a fixed height, so the logo
+   would otherwise overflow it. */
 .brand img {
-  height: clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem);
+  height: clamp(5.7rem, 4.2rem + 4.8vw, 7.8rem);
   width: auto;
   mix-blend-mode: lighten;
 }
@@ -260,6 +263,26 @@
   /* hero-bg.jpg is only 768x540, so it is upscaled hard on desktop. Desaturating
      and pushing contrast turns the softness into grain, which reads as intent. */
   filter: grayscale(1) contrast(1.25) brightness(0.75);
+}
+
+/* Both hero clips are portrait. Covering a widescreen hero shows only a
+   horizontal band, so anchor high: a centred crop lands on the torso. */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  object-position: center 22%;
+  opacity: 0;
+}
+
+/* Hard cut, no transition. main.js flips .is-active every second. */
+.hero__video.is-active {
+  opacity: 1;
+}
+
+/* With JS off, nothing sets .is-active on a timer, so pin the first clip
+   visible rather than leaving the hero black. */
+html:not(.js) .hero__video[data-hero-clip="0"] {
+  opacity: 1;
 }
 
 .hero__media::after {
@@ -881,6 +904,42 @@
   margin: 0;
 }
 
+/* --- inverted-section hover fixes ----------------------------------------- */
+
+/* Several components use a near-black hover fill (--surface). Inside a white
+   .section--invert the text is black, so that fill would put black on #121212.
+   Flip those hovers to a light tint instead of leaving the trap in place. */
+.section--invert .row-item:hover,
+.section--invert .review:hover,
+.section--invert .timetable tbody tr:hover td,
+.section--invert .timetable tbody tr:hover th {
+  background: #ececec;
+}
+
+.section--invert .rows,
+.section--invert .row-item,
+.section--invert .faq,
+.section--invert .faq details,
+.section--invert .table-scroll,
+.section--invert .timetable th,
+.section--invert .timetable td {
+  border-color: #cfcfcf;
+}
+
+.section--invert .row-item__num,
+.section--invert .timetable thead th,
+.section--invert .timetable tbody th {
+  color: #555;
+}
+
+.section--invert .timetable thead th {
+  background: #e4e4e4;
+}
+
+.section--invert .link::after {
+  background: currentColor;
+}
+
 /* --- reviews carousel ----------------------------------------------------- */
 
 .reviews {
@@ -928,10 +987,51 @@
   background: var(--surface);
 }
 
+.review__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+/* Monogram, not a photograph. Google itself falls back to letter avatars, and
+   a stock face on a customer testimonial would be inventing a person. Swap in
+   <img> here only for reviewers whose real photo you have the right to use. */
+.review__avatar {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  font-style: italic;
+  font-variation-settings: "wdth" 70, "wght" 900;
+  font-size: var(--step-0);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.review__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
 .review__stars {
   font-size: var(--step-0);
   letter-spacing: 0.28em;
   line-height: 1;
+}
+
+.review__source {
+  display: block;
+  margin-top: 0.25em;
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--step--2);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .review blockquote {

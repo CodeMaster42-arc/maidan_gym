@@ -1,0 +1,16 @@
+# PREVIEW DEPLOY. Indexing is disabled on purpose.
+#
+# This site currently carries placeholder content, including five fabricated
+# customer reviews and an invented 4.8 / 200+ rating on the home page. Letting
+# search engines index that would put made-up reviews for a real business into
+# Google's results.
+#
+# Before flipping this to Allow:
+#   1. Replace the placeholder reviews with real ones (or remove the section).
+#   2. Clear the remaining items in each page's REVIEW comment.
+#   3. Point the sitemap and the canonical/og URLs at the real domain.
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://codemaster42-arc.github.io/maidan_gym/sitemap.xml

@@ -10,27 +10,97 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap">
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="icon" href="assets/images/maidan_gym_logo.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#000000">
+<!-- Absolute URLs point at the GitHub Pages deploy. Find-and-replace this base when a real domain is live. -->
+<link rel="canonical" href="https://codemaster42-arc.github.io/maidan_gym/">
+<meta property="og:title" content="Maidan Athletic Club | Gym &amp; Strength Training in Banaswadi, Bengaluru">
+<meta property="og:description" content="A serious training floor in Banaswadi, Bengaluru. Strength, conditioning, boxing and coached classes seven days a week. Est. 2019. Book a free trial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codemaster42-arc.github.io/maidan_gym/">
+<meta property="og:image" content="https://codemaster42-arc.github.io/maidan_gym/assets/images/hero-bg.jpg">
+<meta property="og:site_name" content="Maidan Athletic Club">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maidan Athletic Club | Gym &amp; Strength Training in Banaswadi, Bengaluru">
+<meta name="twitter:description" content="A serious training floor in Banaswadi, Bengaluru. Strength, conditioning, boxing and coached classes seven days a week. Est. 2019. Book a free trial.">
+<meta name="twitter:image" content="https://codemaster42-arc.github.io/maidan_gym/assets/images/hero-bg.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Maidan Athletic Club",
+  "description": "A serious training floor in Banaswadi, Bengaluru. Strength, conditioning, boxing and coached classes seven days a week. Est. 2019. Book a free trial.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "20, 3rd Floor, Dodda Banaswadi Main Rd, Shamanna Layout, Subaiya Reddy Layout",
+    "addressLocality": "Banaswadi, Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560043",
+    "addressCountry": "IN"
+  },
+  "telephone": "+917760344646",
+  "url": "https://codemaster42-arc.github.io/maidan_gym/",
+  "foundingDate": "2019",
+  "priceRange": "₹₹",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "256",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "image": "https://codemaster42-arc.github.io/maidan_gym/assets/images/hero-bg.jpg",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "06:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<!-- REVIEW — invented placeholders, replace with real details:
-     • Stats strip figures (members, sq ft, classes/week, coaches) — all round guesses
+<!-- REVIEW: invented placeholders, replace with real details:
+     • Stats strip figures (members, sq ft, classes/week, coaches), all round guesses
      • Class names, durations and descriptions
      • Equipment / facilities list
      • Trainer names and specialisms (the two photos are real, the names are not)
-     • ALL FIVE customer reviews are placeholder text with placeholder names, and the
-       4.8 / 200+ rating summary is invented. Google blocks automated fetching of its
-       reviews, so nothing here came from your actual Google listing. Replace with your
-       real review text and reviewer names before this page goes live.
+     • ALL FIVE individual review quotes and reviewer names are still placeholder text.
+       Google blocks automated fetching of its review pages, so no quote here came from
+       your actual listing. These MUST be replaced with real reviews or the section
+       deleted before this is public. Publishing invented testimonials for a real
+       business misleads customers and breaks Google's review policies.
+       (The 4.5 / 256 aggregate is REAL, owner-supplied, and is now also published as
+       schema.org AggregateRating in the JSON-LD above. The individual quotes are not.)
+       To fill it, paste per review: reviewer name, star count, the review text, and
+       the date. Each card takes them in this order:
+         .review__avatar   -> first letter of the reviewer's name (or an <img> if you
+                              have rights to their photo)
+         .review__stars    -> &#9733; filled, &#9734; empty, plus the aria-label count
+         blockquote        -> their exact words
+         figcaption        -> name, then the date in the <span>
+       Update the 4.8 and the review count in .rating-summary at the same time.
      • Email address hello@maidanathletic.club
-     • Opening hours: only the 10 PM close is confirmed. Mon–Sat 05:00–22:00 and
-       Sun 06:00–14:00 are guesses.
-     CONFIRMED REAL — do not change: street address, phone 077603 44646, Est. 2019.
+     • Saturday is ASSUMED to follow weekday hours. Owner confirmed "weekdays 6 to 10,
+       Sunday 10 to 6" without specifying Saturday. Correct this if Saturday differs.
+       Hours live in THREE places: this page's JSON-LD openingHoursSpecification, the
+       marquee "Doors open" figure below, and the hours table on contact.html.
+     CONFIRMED REAL, do not change: street address, phone 077603 44646, Est. 2019.
 -->
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container container--wide site-header__inner">
-    <a class="brand" href="index.html" aria-label="Maidan Athletic Club — home">
+    <a class="brand" href="index.html" aria-label="Maidan Athletic Club home">
       <img src="assets/images/maidan_gym_logo.png" alt="Maidan Athletic Club" width="1638" height="960">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
@@ -51,14 +121,24 @@
   <!-- ===== hero ===== -->
   <section class="hero">
     <div class="hero__media">
-      <!-- Video-ready: drop a landscape loop in here and it takes over from the still.
-           <video src="assets/video/hero-loop.mp4" autoplay muted loop playsinline poster="assets/images/hero-bg.jpg"></video> -->
-      <img src="assets/images/hero-bg.jpg" alt="" width="768" height="540" fetchpriority="high">
+      <!-- Two hero clips cutting between each other every second, driven by main.js.
+           Both run continuously and only visibility swaps, so neither restarts mid-cut.
+           Muted by browser policy; the audible founder clip is in its own section below.
+           Both sources are portrait, so the crop is anchored high to keep subjects in frame.
+           poster= shows hero-bg.jpg while they load, and stands in if they fail. -->
+      <video class="hero__video is-active" data-hero-clip="0" src="assets/video/owner_speech.mp4"
+             poster="assets/images/hero-bg.jpg"
+             autoplay muted loop playsinline preload="auto"
+             width="720" height="1280" aria-hidden="true"></video>
+      <video class="hero__video" data-hero-clip="1" src="assets/video/asad_workout.mp4"
+             poster="assets/images/hero-bg.jpg"
+             autoplay muted loop playsinline preload="auto"
+             width="360" height="640" aria-hidden="true"></video>
     </div>
     <div class="container container--wide hero__inner">
       <span class="eyebrow">Banaswadi, Bengaluru &middot; Estd. 2019</span>
       <h1>Every maidan<br>starts with<br>showing up</h1>
-      <p class="hero__lede">A maidan is open ground — where anyone can turn up and play. We built a training floor on the same idea. Serious equipment, real coaching, no attitude at the door.</p>
+      <p class="hero__lede">A maidan is open ground, where anyone can turn up and play. We built a training floor on the same idea. Proper equipment, coaches on the floor, and room to work.</p>
       <div class="cluster">
         <a class="btn" href="contact.html">Book a free trial</a>
         <a class="btn btn--ghost" href="classes.html">See the classes</a>
@@ -74,7 +154,7 @@
       <div class="marquee__item"><b>40+</b><span>Coached classes weekly</span></div>
       <div class="marquee__item"><b>6</b><span>Full-time coaches</span></div>
       <div class="marquee__item"><b>500+</b><span>Members strong</span></div>
-      <div class="marquee__item"><b>05:00</b><span>Doors open</span></div>
+      <div class="marquee__item"><b>06:00</b><span>Doors open</span></div>
       <div class="marquee__item"><b>2019</b><span>On this ground since</span></div>
     </div>
   </div>
@@ -89,7 +169,7 @@
         </div>
         <div class="stack-l">
           <p class="lede">We are a neighbourhood gym on Dodda Banaswadi Main Road, and we have been here since 2019. No franchise playbook, no contract you need a lawyer to leave.</p>
-          <p class="muted">What we have is a floor that works: proper racks, real weight, space to move, and coaches who learn your name and your injuries. Some members come at five in the morning before a shift. Some come at nine at night after one. Both get the same room and the same attention.</p>
+          <p class="muted">What we have is a floor that works: proper racks, real weight, space to move, and coaches who learn your name and your injuries. Some members come at six in the morning before a shift. Some come at nine at night after one. Both get the same room and the same attention.</p>
           <a class="link" href="contact.html">Come see it &rarr;</a>
         </div>
       </div>
@@ -168,7 +248,7 @@
           <span class="row-item__num">03</span>
           <div>
             <h3>Turf &amp; conditioning bay</h3>
-            <p>Sled track, assault bikes, rowers, ropes and open turf for carries and sprints — kept clear of machines so it stays usable.</p>
+            <p>Sled track, assault bikes, rowers, ropes and open turf for carries and sprints. We keep it clear of machines so it stays usable.</p>
           </div>
         </div>
         <div class="row-item" data-reveal>
@@ -182,7 +262,7 @@
           <span class="row-item__num">05</span>
           <div>
             <h3>Recovery &amp; changing</h3>
-            <p>Stretch area with mats, rollers and bands. Clean changing rooms, showers and lockers — because a gym you commute to has to work around a working day.</p>
+            <p>Stretch area with mats, rollers and bands. Clean changing rooms, showers and lockers. A gym you commute to has to work around a working day.</p>
           </div>
         </div>
       </div>
@@ -196,7 +276,7 @@
         <div class="stack-l">
           <span class="eyebrow">From the founder</span>
           <h2>Why we opened<br>this place</h2>
-          <p class="muted">Thirty seconds, no script. What Maidan was meant to be in 2019, and what it has turned into since — told by the person who signed the lease.</p>
+          <p class="muted">Thirty seconds, no script. What Maidan was meant to be in 2019, and what it has turned into since, told by the person who signed the lease.</p>
           <a class="link" href="contact.html">Book a free trial &rarr;</a>
         </div>
         <div class="video-portrait">
@@ -217,38 +297,68 @@
           <span class="eyebrow">From our members</span>
           <h2>What people say</h2>
           <div class="rating-summary">
-            <b>4.8</b>
-            <span class="review__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="muted mono">Based on 200+ Google reviews</span>
+            <b>4.5</b>
+            <span class="review__stars" aria-label="4.5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="muted mono">Across 256 Google reviews</span>
           </div>
         </div>
       </div>
     </div>
     <div class="reviews__track" tabindex="0" role="region" aria-label="Member reviews, scrollable">
       <figure class="review">
-        <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <div class="review__head">
+          <span class="review__avatar" aria-hidden="true">A</span>
+          <div>
+            <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <span class="review__source">Google review</span>
+          </div>
+        </div>
         <blockquote>Joined with zero gym experience and was genuinely nervous. Someone walked me through every machine on day one and nobody made me feel out of place. Eight months later I am deadlifting more than I weigh.</blockquote>
-        <figcaption>Placeholder name <span>Member since 2024</span></figcaption>
+        <figcaption>Reviewer name <span>Member since 2024</span></figcaption>
       </figure>
       <figure class="review">
-        <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <div class="review__head">
+          <span class="review__avatar" aria-hidden="true">B</span>
+          <div>
+            <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <span class="review__source">Google review</span>
+          </div>
+        </div>
         <blockquote>The 6 AM crowd is the reason I keep the habit. Equipment is well maintained, the place is clean, and the coaches actually correct your form instead of scrolling on their phones.</blockquote>
-        <figcaption>Placeholder name <span>Member since 2022</span></figcaption>
+        <figcaption>Reviewer name <span>Member since 2022</span></figcaption>
       </figure>
       <figure class="review">
-        <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <div class="review__head">
+          <span class="review__avatar" aria-hidden="true">C</span>
+          <div>
+            <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <span class="review__source">Google review</span>
+          </div>
+        </div>
         <blockquote>I came back from a knee injury and they built my programme around it instead of telling me to rest. Careful, patient coaching. Worth every rupee.</blockquote>
-        <figcaption>Placeholder name <span>Member since 2023</span></figcaption>
+        <figcaption>Reviewer name <span>Member since 2023</span></figcaption>
       </figure>
       <figure class="review">
-        <p class="review__stars" aria-label="4 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        <div class="review__head">
+          <span class="review__avatar" aria-hidden="true">D</span>
+          <div>
+            <p class="review__stars" aria-label="4 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <span class="review__source">Google review</span>
+          </div>
+        </div>
         <blockquote>Great floor and great people. Gets genuinely packed around 7 PM so I shifted to mornings, which solved it. Parking on the main road can be a hunt on weekends.</blockquote>
-        <figcaption>Placeholder name <span>Member since 2021</span></figcaption>
+        <figcaption>Reviewer name <span>Member since 2021</span></figcaption>
       </figure>
       <figure class="review">
-        <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <div class="review__head">
+          <span class="review__avatar" aria-hidden="true">E</span>
+          <div>
+            <p class="review__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <span class="review__source">Google review</span>
+          </div>
+        </div>
         <blockquote>Tried three gyms around Banaswadi before this one. The difference is that here the coaches remember what you did last week and ask about it.</blockquote>
-        <figcaption>Placeholder name <span>Member since 2023</span></figcaption>
+        <figcaption>Reviewer name <span>Member since 2023</span></figcaption>
       </figure>
     </div>
     <div class="container">
@@ -334,7 +444,7 @@
     <div class="container container--narrow">
       <span class="eyebrow">Dodda Banaswadi Main Road</span>
       <h2>First session<br>is on us</h2>
-      <p>Walk in, look around, train once, decide after. That is the whole offer — there is nothing to cancel if you do not come back.</p>
+      <p>Walk in, look around, train once, decide after. That is the whole offer. There is nothing to cancel if you do not come back.</p>
       <div class="cluster" style="justify-content:center">
         <a class="btn" href="tel:+917760344646">Call 077603 44646</a>
         <a class="btn btn--ghost" href="contact.html">Send a message</a>
@@ -376,7 +486,7 @@
     </div>
     <div class="site-footer__bottom">
       <span>&copy; 2026 Maidan Athletic Club</span>
-      <span>Estd. 2019 &mdash; Banaswadi, Bengaluru</span>
+      <span>Estd. 2019, Banaswadi, Bengaluru</span>
     </div>
   </div>
 </footer>
