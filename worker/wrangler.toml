@@ -1,0 +1,9 @@
+# Cloudflare Worker config.
+#
+# NOTHING SECRET GOES IN THIS FILE. It is committed to a public repo.
+# The Groq key is set once with `wrangler secret put GROQ_API_KEY` and is stored
+# by Cloudflare, not here. Do not add a [vars] entry for it.
+
+name = "maidan-groq-proxy"
+main = "src/index.js"
+compatibility_date = "2026-01-01"

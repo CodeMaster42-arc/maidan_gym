@@ -5,6 +5,21 @@ Gymbox*
 # Local Claude Code / router config
 .claude/
 
+# Secrets. This repo is public and GitHub Pages serves the whole thing, so an
+# API key committed here is a leaked key. Keys belong in the Worker's secret
+# store, never in the site.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.dev.vars
+secrets.json
+
+# Worker tooling
+node_modules/
+.wrangler/
+
 # OS + editor cruft
 Thumbs.db
 Desktop.ini
