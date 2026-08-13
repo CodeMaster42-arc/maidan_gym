@@ -1,0 +1,14 @@
+# Reference scrape of gymbox.com used only to model layout while building.
+# Third-party content — kept local, never published.
+Gymbox*
+
+# Local Claude Code / router config
+.claude/
+
+# OS + editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
