@@ -20,7 +20,7 @@ const ALLOWED_ORIGINS = [
 
 // Pinned server-side on purpose. If the client picked the model, a scraper
 // could request the most expensive one available.
-const MODEL = 'llama-3.3-70b-versatile';
+const MODEL = 'openai/gpt-oss-120b';
 const MAX_TOKENS = 500;
 const MAX_CHARS = 2000;
 
