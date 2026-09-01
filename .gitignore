@@ -27,3 +27,9 @@ Desktop.ini
 *.swp
 .vscode/
 .idea/
+
+.vercel
+
+# Raw owner-supplied source media; compressed copies live in public/assets
+*.mov
+Screenshot*.png

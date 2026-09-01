@@ -103,6 +103,7 @@
       };
 
       var startCuts = function () {
+        if (heroClips.length < 2) return;
         if (timer === null) timer = setInterval(advance, 1000);
       };
 

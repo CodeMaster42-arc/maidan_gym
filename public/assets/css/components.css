@@ -270,12 +270,10 @@
   filter: brightness(0.7);
 }
 
-/* Both hero clips are portrait. Covering a widescreen hero shows only a
-   horizontal band, so anchor high: a centred crop lands on the torso. */
 .hero__video {
   position: absolute;
   inset: 0;
-  object-position: center 22%;
+  object-position: center;
   opacity: 0;
 }
 
@@ -572,6 +570,15 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
   font-size: var(--step--2);
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+/* --- full-width media strips ----------------------------------------------- */
+
+.media-strip video,
+.media-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* --- trainers ------------------------------------------------------------- */

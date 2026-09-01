@@ -121,7 +121,11 @@
   <!-- ===== hero ===== -->
   <section class="hero">
     <div class="hero__media">
-      <img src="assets/images/hero-bg.jpg" alt="" width="768" height="540" aria-hidden="true">
+      <!-- Muted background loop; the poster stands in while it loads or if it fails. -->
+      <video class="hero__video is-active" src="assets/video/gym_video.mp4"
+             poster="assets/images/hero-bg.jpg"
+             autoplay muted loop playsinline preload="auto"
+             width="1920" height="1080" aria-hidden="true"></video>
     </div>
     <div class="container container--wide hero__inner">
       <span class="eyebrow">Banaswadi, Bengaluru &middot; Estd. 2019</span>
@@ -175,23 +179,12 @@
         </div>
       </div>
     </div>
-    <!-- Placeholder photos below; swap for the owner's training-space photos and videos when provided. -->
-    <div class="grid grid--3 grid--ruled">
-      <article class="class-card" data-reveal>
-        <div class="class-card__media">
-          <img src="assets/images/class-strength.webp" alt="Strength area with racks and barbells" width="726" height="540" loading="lazy">
-        </div>
-      </article>
-      <article class="class-card" data-reveal>
-        <div class="class-card__media">
-          <img src="assets/images/class-card-1.png" alt="Cardio and conditioning floor" width="726" height="540" loading="lazy">
-        </div>
-      </article>
-      <article class="class-card" data-reveal>
-        <div class="class-card__media">
-          <img src="assets/images/class-card-2.jpg" alt="Functional training zone" width="726" height="540" loading="lazy">
-        </div>
-      </article>
+    <div class="container container--wide">
+      <div class="media-strip" data-reveal>
+        <video src="assets/video/gym_video.mp4"
+               autoplay muted loop playsinline preload="metadata"
+               width="1920" height="1080" aria-hidden="true"></video>
+      </div>
     </div>
   </section>
 
