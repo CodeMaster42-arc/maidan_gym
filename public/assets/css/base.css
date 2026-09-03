@@ -64,7 +64,8 @@ table {
 /* --- tokens --------------------------------------------------------------- */
 
 :root {
-  /* Greyscale only. No accent colour by design — the contrast is the identity. */
+  /* Greyscale ground and type: the contrast is the identity. One accent, the
+     club green, is reserved for primary buttons so it always means "act". */
   --black: #000;
   --off-black: #0a0a0a;
   --surface: #121212;
@@ -72,6 +73,9 @@ table {
   --rule: #2b2b2b;
   --muted: #8d8d8d;
   --white: #fff;
+
+  --accent: #15803d;
+  --on-accent: var(--white);
 
   --ink: var(--white);
   --ground: var(--black);

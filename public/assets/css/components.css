@@ -10,48 +10,61 @@
   justify-content: center;
   gap: 0.6em;
   padding: 0.95em 1.9em;
-  border: 1px solid var(--white);
-  background: var(--white);
-  color: var(--black);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
   font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--step--1);
   letter-spacing: 0.16em;
   line-height: 1;
   text-transform: uppercase;
-  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
 }
 
 .btn:hover,
 .btn:focus-visible {
+  border-color: var(--white);
   background: transparent;
   color: var(--white);
 }
 
 .btn--ghost {
+  border-color: var(--white);
   background: transparent;
   color: var(--white);
 }
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-  background: var(--white);
-  color: var(--black);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .section--invert .btn {
-  border-color: var(--black);
-  background: var(--black);
-  color: var(--white);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .section--invert .btn:hover,
 .section--invert .btn:focus-visible {
+  border-color: var(--accent);
   background: transparent;
-  color: var(--black);
+  color: var(--accent);
 }
 
 .btn--block {
   width: 100%;
+}
+
+/* Header CTA: sized to sit inside the fixed bar next to the nav links. */
+.btn--small {
+  min-height: 2rem;
+  padding: 0.75em 1.35em;
+  font-size: var(--step--2);
+  letter-spacing: 0.2em;
 }
 
 /* Text link with a rule that wipes in from the left. */
@@ -103,6 +116,22 @@
   justify-content: space-between;
   gap: var(--space-m);
   width: 100%;
+}
+
+/* Brand sits left. Nav links and the actions cluster right: the auto margin on
+   the nav soaks up the free space, so the Join now button lands in the corner.
+   Below 60em the nav is a fixed panel (see below) and this margin is moot. */
+@media (min-width: 60em) {
+  .site-nav {
+    margin-inline-start: auto;
+  }
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  flex: none;
 }
 
 /* The logo PNG is white artwork on an opaque black plate (no alpha), so it can
@@ -205,7 +234,13 @@
 
   .site-nav {
     position: fixed;
-    inset: var(--header-h) 0 0;
+    /* The header's backdrop-filter makes it the containing block for this
+       fixed panel, so a bottom: 0 would resolve against the 3.5rem bar rather
+       than the viewport and the menu came out 144px tall. Size it explicitly.
+       The vh line is the fallback for browsers without dvh. */
+    inset: var(--header-h) 0 auto;
+    height: calc(100vh - var(--header-h));
+    height: calc(100dvh - var(--header-h));
     background: var(--black);
     padding: var(--space-xl) var(--gutter);
     transform: translateY(-100%);
@@ -248,8 +283,8 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: 92svh;
-  padding-block: calc(var(--header-h) + var(--space-xl)) var(--space-xl);
+  min-height: 78svh;
+  padding-block: calc(var(--header-h) + var(--space-xl)) var(--space-l);
   overflow: hidden;
   isolation: isolate;
 }
@@ -307,18 +342,19 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
 }
 
 .hero h1 {
-  font-size: var(--step-5);
-  margin-block: var(--space-s) var(--space-m);
+  font-size: var(--step-4);
+  margin-block: var(--space-xs) var(--space-s);
 }
 
 .hero__lede {
-  max-width: 40ch;
-  font-size: var(--step-1);
+  max-width: 44ch;
+  font-size: var(--step-0);
+  line-height: 1.55;
   color: #d6d6d6;
 }
 
 .hero .cluster {
-  margin-top: var(--space-l);
+  margin-top: var(--space-m);
   gap: var(--space-s);
 }
 
@@ -331,7 +367,7 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
     display: block;
     position: absolute;
     right: var(--gutter);
-    bottom: var(--space-xl);
+    bottom: var(--space-l);
     writing-mode: vertical-rl;
     font-family: "Space Mono", ui-monospace, monospace;
     font-size: var(--step--2);
@@ -641,15 +677,16 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
 }
 
 .plan--featured .btn {
-  border-color: var(--black);
-  background: var(--black);
-  color: var(--white);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .plan--featured .btn:hover,
 .plan--featured .btn:focus-visible {
+  border-color: var(--accent);
   background: transparent;
-  color: var(--black);
+  color: var(--accent);
 }
 
 .plan__price {
