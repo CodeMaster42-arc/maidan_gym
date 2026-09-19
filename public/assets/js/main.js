@@ -132,33 +132,6 @@
     }
   }
 
-  /* --- class card hover video --------------------------------------------- */
-
-  // Wired ahead of real footage: a card only gains hover-video behaviour if a
-  // <video> is actually present inside its media well.
-  document.querySelectorAll('.class-card').forEach(function (card) {
-    var video = card.querySelector('.class-card__media video');
-    if (!video) return;
-
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-
-    var start = function () {
-      var played = video.play();
-      if (played && typeof played.catch === 'function') played.catch(function () {});
-    };
-    var stop = function () {
-      video.pause();
-      video.currentTime = 0;
-    };
-
-    card.addEventListener('mouseenter', start);
-    card.addEventListener('mouseleave', stop);
-    card.addEventListener('focusin', start);
-    card.addEventListener('focusout', stop);
-  });
-
   /* --- reviews carousel --------------------------------------------------- */
 
   document.querySelectorAll('.reviews').forEach(function (root) {
