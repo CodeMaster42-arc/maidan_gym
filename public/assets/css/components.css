@@ -550,6 +550,80 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
   font-size: var(--step--1);
 }
 
+/* --- floor rows with photography ------------------------------------------ */
+
+/* The gallery variant gives each row a large 4:3 photo and alternates which
+   side it sits on. Rows without a figure are unaffected. */
+.rows--gallery .row-item {
+  align-items: center;
+  gap: var(--space-m);
+  row-gap: var(--space-s);
+  padding-block: var(--space-l);
+}
+
+.row-item__media {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+}
+
+.row-item__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur) var(--ease);
+}
+
+.row-item:hover .row-item__media img {
+  transform: scale(1.03);
+}
+
+@media (min-width: 60em) {
+  /* number | text | photo, with the photo taking close to half the row. */
+  .rows--gallery .row-item {
+    grid-template-columns: 3.5rem minmax(0, 1fr) minmax(0, 0.85fr);
+  }
+
+  .rows--gallery .row-item__body {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .rows--gallery .row-item__media {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  /* Flipped rows swap the two, so the photo leads. */
+  .rows--gallery .row-item--flip {
+    grid-template-columns: 3.5rem minmax(0, 0.85fr) minmax(0, 1fr);
+  }
+
+  .rows--gallery .row-item--flip .row-item__media {
+    grid-column: 2;
+  }
+
+  .rows--gallery .row-item--flip .row-item__body {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 59.99em) {
+  /* Stacked: the number sits beside the heading, photo full width beneath. */
+  .rows--gallery .row-item__media {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row-item:hover .row-item__media img {
+    transform: none;
+  }
+}
+
 /* --- full-width media strips ----------------------------------------------- */
 
 .media-strip video,
