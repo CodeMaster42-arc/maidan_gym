@@ -563,7 +563,7 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
 
 .row-item__media {
   margin: 0;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--rule);
@@ -582,9 +582,10 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
 }
 
 @media (min-width: 60em) {
-  /* number | text | photo, with the photo taking close to half the row. */
+  /* number | text | photo. The photo takes roughly two thirds of the row so
+     it reads as the subject and the text as its caption. */
   .rows--gallery .row-item {
-    grid-template-columns: 3.5rem minmax(0, 1fr) minmax(0, 0.85fr);
+    grid-template-columns: 3.5rem minmax(0, 0.8fr) minmax(0, 1.5fr);
   }
 
   .rows--gallery .row-item__body {
@@ -599,7 +600,7 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
 
   /* Flipped rows swap the two, so the photo leads. */
   .rows--gallery .row-item--flip {
-    grid-template-columns: 3.5rem minmax(0, 0.85fr) minmax(0, 1fr);
+    grid-template-columns: 3.5rem minmax(0, 1.5fr) minmax(0, 0.8fr);
   }
 
   .rows--gallery .row-item--flip .row-item__media {
