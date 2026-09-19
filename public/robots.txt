@@ -8,9 +8,10 @@
 # Before flipping this to Allow:
 #   1. Replace the placeholder reviews with real ones (or remove the section).
 #   2. Clear the remaining items in each page's REVIEW comment.
-#   3. Point the sitemap and the canonical/og URLs at the real domain.
+#   3. Point the canonical and og:url tags at maidanfitness.com. The sitemap
+#      itself was moved across on 2026-09-19; the page tags still are not.
 
 User-agent: *
 Disallow: /
 
-Sitemap: https://codemaster42-arc.github.io/maidan_gym/sitemap.xml
+Sitemap: https://maidanfitness.com/sitemap.xml

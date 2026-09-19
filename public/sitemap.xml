@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://codemaster42-arc.github.io/maidan_gym/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://maidanfitness.com/</loc>
+    <lastmod>2026-09-19</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://codemaster42-arc.github.io/maidan_gym/memberships.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://maidanfitness.com/memberships</loc>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codemaster42-arc.github.io/maidan_gym/trainers.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://maidanfitness.com/trainers</loc>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codemaster42-arc.github.io/maidan_gym/contact.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <loc>https://maidanfitness.com/contact</loc>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
-<!-- URLs point at the GitHub Pages deploy. Find-and-replace this base when a real domain is live. -->
+<!-- Extensionless URLs are the canonical ones: vercel.json sets cleanUrls, so
+     /memberships.html 308-redirects to /memberships. Listing the .html form
+     here would point search engines at a redirect instead of the real page. -->
