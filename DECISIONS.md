@@ -1,0 +1,3 @@
+2026-09-28 — PT rates rebuilt as three stacked bordered rows (photo/text, alternating sides) with new .rate-row classes; .plan left untouched because memberships.html shares it — matches owner's reference image without touching the memberships cards
+2026-09-28 — Hero poster switched from stock hero-bg.jpg to hero-poster.webp (frame 0 of gym_video.mp4) — the stock photo was the image flashing on load; frame 0 makes poster-to-video seamless. hero-bg.jpg kept for og:image/JSON-LD (separate SEO unit)
+2026-09-28 — PT photos encoded to webp q80 at source resolution (64–95 KB each) — matches repo's webp convention

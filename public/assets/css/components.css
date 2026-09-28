@@ -1181,36 +1181,89 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
   color: var(--muted);
 }
 
-/* --- PT rates: plan cards on a white section ------------------------------ */
-
-.section--invert .grid--ruled {
-  background: #cfcfcf;
-  border-color: #cfcfcf;
-}
-
-.section--invert .plan {
-  background: var(--white);
-}
+/* --- PT rates: one bordered row per plan, photo beside the price --------- */
 
 .section--invert .plan__price small,
 .section--invert .plan__note {
   color: #555;
 }
 
-.grid--rates .plan__note {
+.rates {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.rate-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #cfcfcf;
+  background: var(--white);
+}
+
+.rate-row__media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e4e4e4;
+}
+
+/* Every trainer's face sits in the top fifth of the frame; --focus
+   nudges the crop sideways per photo so none of them gets cut. */
+.rate-row__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, 50% 20%);
+}
+
+.rate-row__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-l) var(--space-m);
+}
+
+.rate-row .plan__name {
+  font-size: var(--step-3);
+  margin-bottom: var(--space-s);
+}
+
+.rate-row .plan__price {
+  font-size: var(--step-4);
+}
+
+.rate-row .plan__note {
   margin-bottom: var(--space-m);
   font-size: var(--step-0);
 }
 
-/* Three cards: go straight to three across so no cell sits empty at 2-up. */
-@media (min-width: 40em) {
-  .grid--rates {
-    grid-template-columns: repeat(3, 1fr);
+/* Side by side from tablet up; flipped rows put the photo on the right. */
+@media (min-width: 48em) {
+  .rate-row {
+    grid-template-columns: 1fr 1fr;
   }
-}
 
-/* Plan name on the PT cards: the headline of each card, not a small label. */
-.grid--rates .plan__name {
-  font-size: var(--step-2);
-  margin-bottom: var(--space-s);
+  .rate-row__media {
+    grid-column: 1;
+    grid-row: 1;
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .rate-row__body {
+    grid-column: 2;
+    grid-row: 1;
+    padding: var(--space-l);
+  }
+
+  .rate-row--flip .rate-row__media {
+    grid-column: 2;
+  }
+
+  .rate-row--flip .rate-row__body {
+    grid-column: 1;
+  }
 }
