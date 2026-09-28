@@ -1208,3 +1208,9 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Plan name on the PT cards: the headline of each card, not a small label. */
+.grid--rates .plan__name {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-s);
+}
