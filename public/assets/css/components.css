@@ -1180,3 +1180,31 @@ html:not(.js) .hero__video[data-hero-clip="0"] {
   text-transform: uppercase;
   color: var(--muted);
 }
+
+/* --- PT rates: plan cards on a white section ------------------------------ */
+
+.section--invert .grid--ruled {
+  background: #cfcfcf;
+  border-color: #cfcfcf;
+}
+
+.section--invert .plan {
+  background: var(--white);
+}
+
+.section--invert .plan__price small,
+.section--invert .plan__note {
+  color: #555;
+}
+
+.grid--rates .plan__note {
+  margin-bottom: var(--space-m);
+  font-size: var(--step-0);
+}
+
+/* Three cards: go straight to three across so no cell sits empty at 2-up. */
+@media (min-width: 40em) {
+  .grid--rates {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
